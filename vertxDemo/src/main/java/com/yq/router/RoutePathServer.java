@@ -51,7 +51,7 @@ public class RoutePathServer extends AbstractVerticle {
 
             response.end(data);
         });
-        logger.info("Path demo starting done");
+        logger.info("Path helloworld starting done");
         server.requestHandler(router::accept).listen(8080);
     }
 

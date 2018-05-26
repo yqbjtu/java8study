@@ -11,24 +11,25 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: io.vertx:vertx-core:3.4.1" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.8.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.8.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.8.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.8.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.8.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-handler-proxy:4.1.8.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-codec-socks:4.1.8.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-codec-http:4.1.8.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-codec-http2:4.1.8.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.8.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-resolver-dns:4.1.8.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-codec-dns:4.1.8.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.vertx:vertx-core:3.5.1" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.19.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.19.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.19.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.19.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.19.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler-proxy:4.1.19.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-socks:4.1.19.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-http:4.1.19.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-http2:4.1.19.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.19.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver-dns:4.1.19.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-dns:4.1.19.Final" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.11" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.11.1" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" level="project" />
-    <orderEntry type="library" name="Maven: io.vertx:vertx-web:3.4.1" level="project" />
-    <orderEntry type="library" name="Maven: io.vertx:vertx-auth-common:3.4.1" level="project" />
+    <orderEntry type="library" name="Maven: io.vertx:vertx-web:3.5.1" level="project" />
+    <orderEntry type="library" name="Maven: io.vertx:vertx-auth-common:3.5.1" level="project" />
+    <orderEntry type="library" name="Maven: io.vertx:vertx-bridge-common:3.5.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:1.5.12.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:1.5.12.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:1.5.12.RELEASE" level="project" />

@@ -1,7 +1,6 @@
-package com.yq;
+package com.yq.helloworld;
 
 
-import com.yq.router.RoutePathServer;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpServer;
@@ -50,7 +49,7 @@ public class SimpleWebServer extends AbstractVerticle {
         });
 
         server.listen(8080);
-        logger.info("SimpleWebServer demo starting done");
+        logger.info("SimpleWebServer helloworld starting done");
         // 或者直接下边这种
         // Vertx.vertx().createHttpServer().requestHandler(req ->
         // req.response().
