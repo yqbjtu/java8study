@@ -1,7 +1,7 @@
 
 package com.yq;
 
-import com.yq.base.StaticServer;
+import com.yq.springboot.StaticServer;
 import io.vertx.core.Vertx;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;

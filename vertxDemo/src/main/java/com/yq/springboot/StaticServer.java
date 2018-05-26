@@ -1,6 +1,5 @@
-package com.yq.base;
+package com.yq.springboot;
 
-import com.yq.config.AppConfiguration;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.handler.StaticHandler;
