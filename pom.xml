@@ -6,7 +6,11 @@
 
     <groupId>com.yq</groupId>
     <artifactId>javaDemo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>droolsDemo</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
