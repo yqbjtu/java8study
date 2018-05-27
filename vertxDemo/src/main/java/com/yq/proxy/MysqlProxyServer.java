@@ -1,5 +1,5 @@
 
-package com.yq.Proxy;
+package com.yq.proxy;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Vertx;

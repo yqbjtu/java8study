@@ -35,6 +35,13 @@
             <version>${vertx.version}</version>
         </dependency>
 
+        <!-- 这个是mqtt client需要的依赖-->
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-mqtt</artifactId>
+            <version>${vertx.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
