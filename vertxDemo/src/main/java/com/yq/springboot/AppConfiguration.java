@@ -2,6 +2,7 @@
 package com.yq.springboot;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 
@@ -12,11 +13,17 @@ import org.springframework.core.env.Environment;
 @Configuration
 public class AppConfiguration {
 
-    @Autowired
-    Environment environment;
+//    @Autowired
+//    Environment environment;
+//
+//    public int httpPort() {
+//        return environment.getProperty("http.port", Integer.class, 8081);
+//    }
+
+    @Value("${vertx.http.port:8081}")
+    private int httpPort;
 
     public int httpPort() {
-        return environment.getProperty("http.port", Integer.class, 8081);
+        return httpPort;
     }
-
 }
