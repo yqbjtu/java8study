@@ -2,8 +2,13 @@
 <kmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://www.drools.org/xsd/kmodule">
 
+    <!-- packages 就是规则文件所在的路径，在本例中就是D:\E\workspaceGitub\java8study\droolsDemo\src\main\resources\com\yq\helloworld目录-->
     <kbase name="HelloWorldKB" packages="com.yq.helloworld">
         <ksession name="HelloWorldKS"/>
     </kbase>
 
+    <!-- packages 就是规则文件所在的路径，在本例中就是D:\E\workspaceGitub\java8study\droolsDemo\src\main\resources\com\yq\helloworld目录-->
+    <kbase name="HelloWorldMapKB" packages="HelloWorldMap">
+        <ksession name="HelloWorldMapKS"/>
+    </kbase>
 </kmodule>

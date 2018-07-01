@@ -1,0 +1,17 @@
+
+package org.drools.examples.helloworld
+ 
+import com.yq.helloworld.HelloWorldExample.Message;
+import java.util.Map;
+import java.util.HashMap;
+
+global java.util.List list
+ 
+rule "Hello WorldMap"
+    dialect "mvel"
+    when
+        $map: Map( $msg:(this["L001"]) > 10 )
+    then
+        System.out.println("map key[L001]'s value is " +  $map.get("L001"))
+end
+

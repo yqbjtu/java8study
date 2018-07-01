@@ -26,6 +26,8 @@ public class VertxMQTTClient extends AbstractVerticle {
     @Override
     public void start() throws Exception {
         MqttClientOptions options = new MqttClientOptions().setKeepAliveTimeSeconds(2);
+        //options.setUsername();
+        //options.setPassword()
         MqttClient client = MqttClient.create(Vertx.vertx(), options);
 
         // handler will be called when we have a message in topic we subscribing for
