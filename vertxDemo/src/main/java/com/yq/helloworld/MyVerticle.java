@@ -1,5 +1,3 @@
-
-
 package com.yq.helloworld;
 
 import io.vertx.core.AbstractVerticle;

@@ -86,18 +86,12 @@ public class InputContent {
                 "global java.util.List list\n" +
                 "rule  \"917f802ca94847abbd3d4c63569d48d5\" salience 3\n" +
                 "when\n" +
-                " $map: Map( $msg:(this[\"name\"]>45 && this[\"name\"]<=75)==true )\n" +
+                " $map: Map( $msg:( (this[\"name\"] /3 ) == 3)==true )\n" +
                 "then \n" +
-                "list.add(\"str1\");\n" +
+                "list.add(\"str11\");\n" +
                 "end \n\n" +
 
-              "rule  \"fd6ffcc960354583ad1b3f324d28bdea\" salience 2\n" +
-                "when\n" +
-                        " $map: Map( $msg:(this[\"name\"]>75)==true )\n" +
-                        //" $map: Map( $msg:(this[\"name\"]>75) )\n" +
-                        "then  \n " +
-                "list.add(\"str2\");\n" +
-                "end \n" +
+
                 "rule  \"01a3fe25a6264ad6bd7b660521827be1\" salience 2\n" +
                  "when \n" +
                   " $map: Map( $msg:(this[\"M0002\"]>50 && this[\"M0002\"]<70 && this[\"M0005\"] >55 && this[\"M0005\"]<=80)==true )\n" +
@@ -119,10 +113,11 @@ public class InputContent {
         }
 
         Map<String, Object> map = new HashMap<>();
-        map.put("name", 62);
-        map.put("M0002", 65);
-        map.put("M0005", 61);
+        map.put("name", 6);
+        //map.put("M0002", 65);
+        //map.put("M0005", 61);
         List<String> list = new ArrayList<>();
+        System.out.println("初始size：" + list.size() + "个告警" );
         try {
             demo.triggerRule(map, list);
         } catch (Exception ex) {
@@ -134,7 +129,7 @@ public class InputContent {
             System.out.println("规则执行正常，没有告警产生");
         }
         else {
-            System.out.println("规则执行正常，产生" + list.size() + "个告警" );
+            System.out.println("规则执行正常，产生" + list + "个告警" );
         }
 
         list.clear();

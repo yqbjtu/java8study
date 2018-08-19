@@ -16,7 +16,7 @@
 
 package org.drools.examples.helloworld
  
-import com.yq.helloworld.HelloWorldExample.Message;
+import HelloWorldExample.Message;
 
 global java.util.List list
  
