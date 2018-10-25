@@ -78,7 +78,10 @@ public class MainDemo {
             System.out.println("str:" + str + ", bytes:" + Arrays.toString(bytes));
             String str1 = "中nihao中";
             bytes = str1.getBytes("GBK");
-            System.out.println("str1:" + str1 + ", bytes:" + Arrays.toString(bytes));
+            System.out.println("str1:" + str1 + ", GBK bytes:" + Arrays.toString(bytes));
+
+            bytes = str1.getBytes("utf-8");
+            System.out.println("str1:" + str1 + ", utf-8 bytes:" + Arrays.toString(bytes));
         }
         catch (Exception ex){
 
