@@ -23,7 +23,7 @@ import java.util.Map;
  **/
 
 @Slf4j
-public class InputContent {
+public class InputContentAlarmMsg {
 
     private KnowledgeBase knowledgeBase;
 
@@ -55,7 +55,7 @@ public class InputContent {
         return null;
     }
 
-    private void triggerRule(Object fact, List<String> list){
+    private void triggerRule(Object fact, List<AlarmMsg> list){
         if(fact==null) {
             log.debug("facts is empty!");
             return;
@@ -79,13 +79,16 @@ public class InputContent {
                 "import java.util.Map;\n" +
                 "import java.util.HashMap;\n" +
                 "import java.util.List;\n" +
+                "import  com.yq.helloworld.StringRuleContent.AlarmMsg;\n" +
                 "dialect  \"mvel\"\n" +
                 "global java.util.List list\n" +
                 "rule  \"917f802ca94847abbd3d4c63569d48d5\" salience 3\n" +
                 "when\n" +
                 " $map: Map( $msg:( (this[\"name\"] /3 ) == 3)==true )\n" +
                 "then \n" +
-                "list.add(\"str11\");\n" +
+                "AlarmMsg alarmMsg = new AlarmMsg(); \n" +
+                "alarmMsg.setTitle(\"str11\"); \n" +
+                "list.add(alarmMsg);\n" +
                 "end \n\n" +
 
 
@@ -93,10 +96,12 @@ public class InputContent {
                  "when \n" +
                   " $map: Map( $msg:(this[\"M0002\"]>50 && this[\"M0002\"]<70 && this[\"M0005\"] >55 && this[\"M0005\"]<=80)==true )\n" +
                    " then " +
-                 "list.add(\"str3\");\n" +
+                  "AlarmMsg alarmMsg = new AlarmMsg(); \n" +
+                  "alarmMsg.setTitle(\"str2\"); \n" +
+                 "list.add(alarmMsg);\n" +
                 "end";
 
-        InputContent demo = new InputContent();
+        InputContentAlarmMsg demo = new InputContentAlarmMsg();
         try {
             KnowledgeBuilderErrors errors = demo.loadRule(str.toString());
             if (errors != null) {
@@ -116,7 +121,7 @@ public class InputContent {
         map2.put("M0002", 65);
         map2.put("M0005", 61);
 
-        List<String> list = new ArrayList<>();
+        List<AlarmMsg> list = new ArrayList<>();
         System.out.println("初始size：" + list.size() + "个告警" );
         try {
             demo.triggerRule(map1, list);
@@ -146,8 +151,20 @@ public class InputContent {
         else {
             System.out.println("规则执行正常2，产生" + list.size() + "个告警" );
             for (Object obj : list) {
-                ClassLoader clzLoader  =  obj.getClass().getClassLoader();
+                ClassLoader clzLoader = obj.getClass().getClassLoader();
                 System.out.println("ClassLoader is "+ clzLoader);
+                if (obj instanceof AlarmMsg) {
+                    System.out.println("drools uses the same AppClassLoader with my program ");
+                }
+                else {
+                    ClassLoader myClzLoader = AlarmMsg.class.getClassLoader();
+                    System.out.println("drools uses " + clzLoader + ", myProgram uses " + myClzLoader);
+                }
+            }
+
+            for (AlarmMsg msg : list) {
+                System.out.println("AlarmMsg:" + msg);
+
             }
         }
     }
